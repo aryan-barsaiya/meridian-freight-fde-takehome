@@ -247,14 +247,18 @@
     "claim"
    ],
    "load": "MF-10027",
-   "expect_findings": []
+   "expect_findings": [
+    "REFUSED_BUT_DELIVERED"
+   ]
   },
   "040": {
    "category": [
     "claim"
    ],
    "load": "MF-10031",
-   "expect_findings": []
+   "expect_findings": [
+    "REFUSED_BUT_DELIVERED"
+   ]
   },
   "041": {
    "category": [

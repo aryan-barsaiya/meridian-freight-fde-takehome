@@ -29,6 +29,9 @@ skips drafts because it doesn't score them. Building cost about $2 in API calls.
   - A code comment called an effort setting "measured" before anything had been measured.
   - Drafts said "we have opened a file", an action nobody took.
   - Both are fixed.
+- **My own labels missed one.** Reading a demo of 039, I saw the packet said "CLEAR" on a
+  refused-freight claim whose load FreightPro records as Delivered with a POD on file. The labels
+  agreed with the system, so the eval couldn't catch it. Added a check, and fixed the labels for 039 and 040.
 - **Scope.** The brief says "at most one" stretch. I treat PII redaction as core, because Legal
   requires it before any model call, so the 60-email eval is the one stretch.
 
@@ -46,7 +49,7 @@ raw data, with no access to my labels or code: 12 random plus 6 hard cases.
   scheduled dates, and shortage claims should ask for the count shipped versus received.
 - I rejected its "Seafood shipper, retail-freight load" flag, because a shipper's name isn't a commodity.
 
-**Limit of the eval.** It scores 60/60 routing, 60/60 lookup, 7/7 discrepancies and 0 false alarms.
+**Limit of the eval.** It scores 60/60 routing, 60/60 lookup, 9/9 discrepancies and 0 false alarms.
 But the prompts were tuned on these emails, so treat it as a regression suite, not proof of
 accuracy on new email.
 

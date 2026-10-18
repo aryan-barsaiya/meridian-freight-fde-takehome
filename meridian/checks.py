@@ -154,6 +154,11 @@ def _check_claimed_facts(load, carrier, ex: Extraction, fp: FreightPro, pods: li
         out.append(Finding("warn", "COMMODITY_MISMATCH",
                            f"Email says '{ex.claimed_commodity}'; load commodity is '{load['Commodity']}'."))
 
+    if "refused" in ex.claim_issues and (load["Status"] == "Delivered" or load["PODReceived"] == "Y"):
+        out.append(Finding("warn", "REFUSED_BUT_DELIVERED",
+                           f"Shipper says the freight was refused, but FreightPro shows '{load['Status']}' with "
+                           f"POD on file: {load['PODReceived']}. Check the POD for a refusal notation."))
+
     if "late" in ex.claim_issues:
         out.append(Finding("info", "LATE_UNVERIFIED",
                            f"Late-delivery claim: FreightPro only has the scheduled date ({load['DeliveryDate']}), "
@@ -199,6 +204,8 @@ def documents_to_request(findings: list[Finding], extraction: Extraction | None,
     if any(f.code == "POD_NOT_ATTACHED" and "request it" in f.message for f in findings):
         docs.append("the signed delivery receipt (POD), including any exceptions noted by the receiver")
     issues = set(extraction.claim_issues) if extraction else set()
+    if "refused" in issues:
+        docs.append("the receiver's reason for refusal and where the freight is now")
     if "shortage" in issues:
         docs.append("the piece or pallet count shipped versus received")
     if "damage" in issues and photo_count == 0:
@@ -218,6 +225,9 @@ def next_steps(findings: list[Finding]) -> list[str]:
     if "POD_CLEAN_VS_CLAIM" in codes:
         photos = "Once the photos arrive, compare them" if "PHOTOS_MISSING" in codes else "Compare the shipper's photos"
         steps.append(f"{photos} with the clean POD; ask the carrier for their delivery notes.")
+    if "REFUSED_BUT_DELIVERED" in codes:
+        steps.append("Pull the POD on file and check it for a refusal; confirm where the freight is now "
+                     "(returned, stored, disposed) and whether storage charges are accruing.")
     if "LATE_UNVERIFIED" in codes:
         steps.append("Check the actual delivery time on the POD before responding to the late-delivery claim.")
     if "POD_UNREADABLE" in codes:

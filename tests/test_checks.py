@@ -44,6 +44,13 @@ def test_042_shipper_on_credit_hold():
     assert "SHIPPER_CREDIT_HOLD" in codes and "POD_NOT_ATTACHED" in codes
 
 
+@pytest.mark.parametrize("email_id", ["039", "040"])
+def test_refusal_claim_on_a_load_recorded_as_delivered(email_id):
+    result, codes, _ = run(email_id, claim_issues=["refused"])
+    assert "REFUSED_BUT_DELIVERED" in codes
+    assert any("reason for refusal" in d for d in result.documents)
+
+
 def test_wrong_carrier_named_is_flagged():
     _, codes, _ = run("035", claim_issues=["damage"], claimed_carrier_name="Swift Transportation")
     assert "CARRIER_MISMATCH" in codes

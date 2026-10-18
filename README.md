@@ -58,7 +58,7 @@ The model never decides whether a claim is valid, and it never sees FreightPro r
 | `meridian/pod.py` | parse born-digital PODs; flag scans with no text layer as unreadable |
 | `meridian/redact.py` | strip driver names, phones, emails before any model call, plus an independent guard that refuses to send |
 | `meridian/llm.py` | the only module that calls the Anthropic API (`claude-opus-5-5`, structured outputs) |
-| `meridian/checks.py` | 28 finding types (4 block, 14 warn, 10 info), documents to request, next steps |
+| `meridian/checks.py` | 29 finding types (4 block, 15 warn, 10 info), documents to request, next steps |
 | `meridian/packet.py` | render the packet |
 | `eval/run_eval.py` | score all 60 emails: routing, lookup, findings, PII, cost/latency |
 
@@ -68,6 +68,7 @@ The model never decides whether a claim is valid, and it never sees FreightPro r
 |---|---|
 | 035 | POD reads "no exceptions noted" but shipper claims damage; email says photos attached but none arrived; "JBHT" = JB Hunt, MC 023401, carrier of record |
 | 036–038 | "Scanned" POD has no text layer; don't decide on it, request a legible copy |
+| 039, 040 | Shipper says freight was **refused**, but FreightPro shows Delivered with a POD on file; check the POD and find where the freight is |
 | 041 | Only a PO given (load found); temperature claim on a **Flatbed** |
 | 042 | Only a BOL given (load found); shipper on **credit hold** |
 | 060 (not a claim) | BOL218661 matches **two** loads; refuses to guess |
@@ -82,7 +83,7 @@ Last full run ([`eval/out/report_full.md`](eval/out/report_full.md)):
 | Claims caught / non-claims wrongly pulled in | 8/8 · 0 |
 | Category accuracy · two-requests-in-one detected | 60/60 · 3/3 |
 | Correct load, or correctly refused (ambiguous / no reference) | 60/60 |
-| Expected claim discrepancies raised · false alarms | 7/7 · 0 |
+| Expected claim discrepancies raised · false alarms | 9/9 · 0 |
 | PII values in outbound model requests | 0 |
 | Cost · latency per email (classification) | ~$0.013 · p50 3.3s, p95 4.1s |
 
