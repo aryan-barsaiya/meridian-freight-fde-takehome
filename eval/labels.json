@@ -1,0 +1,404 @@
+{
+ "_note": "Hand-labelled from reading each email and the FreightPro rows. category = acceptable primary categories; load = expected load (list = expected ambiguous candidates, null = no reference). expect_findings = warn/block codes a correct claim packet must raise; any other warn/block code counts as a false alarm.",
+ "labels": {
+  "001": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10280"
+  },
+  "002": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10285"
+  },
+  "003": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10298"
+  },
+  "004": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10314"
+  },
+  "005": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10333"
+  },
+  "006": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10337"
+  },
+  "007": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10338"
+  },
+  "008": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10357"
+  },
+  "009": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10384"
+  },
+  "010": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10402"
+  },
+  "011": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10403"
+  },
+  "012": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10412"
+  },
+  "013": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10414"
+  },
+  "014": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10436"
+  },
+  "015": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10444"
+  },
+  "016": {
+   "category": [
+    "quote"
+   ],
+   "load": "MF-10447"
+  },
+  "017": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "018": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "019": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "020": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "021": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "022": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "023": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "024": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "025": {
+   "category": [
+    "quote"
+   ],
+   "load": null
+  },
+  "026": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10003"
+  },
+  "027": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10016"
+  },
+  "028": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10018"
+  },
+  "029": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10020"
+  },
+  "030": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10026"
+  },
+  "031": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10010"
+  },
+  "032": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10021"
+  },
+  "033": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10037"
+  },
+  "034": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10044"
+  },
+  "035": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10487",
+   "expect_findings": [
+    "POD_CLEAN_VS_CLAIM",
+    "PHOTOS_MISSING"
+   ]
+  },
+  "036": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10005",
+   "expect_findings": [
+    "POD_UNREADABLE"
+   ]
+  },
+  "037": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10055",
+   "expect_findings": [
+    "POD_UNREADABLE"
+   ]
+  },
+  "038": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10088",
+   "expect_findings": [
+    "POD_UNREADABLE"
+   ]
+  },
+  "039": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10027",
+   "expect_findings": []
+  },
+  "040": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10031",
+   "expect_findings": []
+  },
+  "041": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10032",
+   "expect_findings": [
+    "TEMP_CLAIM_NON_REEFER"
+   ]
+  },
+  "042": {
+   "category": [
+    "claim"
+   ],
+   "load": "MF-10034",
+   "expect_findings": [
+    "SHIPPER_CREDIT_HOLD"
+   ]
+  },
+  "043": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10006"
+  },
+  "044": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10011"
+  },
+  "045": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10022"
+  },
+  "046": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10060"
+  },
+  "047": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10074"
+  },
+  "048": {
+   "category": [
+    "tender"
+   ],
+   "load": "MF-10086"
+  },
+  "049": {
+   "category": [
+    "tender"
+   ],
+   "load": null
+  },
+  "050": {
+   "category": [
+    "invoice"
+   ],
+   "load": "MF-10131"
+  },
+  "051": {
+   "category": [
+    "invoice"
+   ],
+   "load": "MF-10135"
+  },
+  "052": {
+   "category": [
+    "invoice"
+   ],
+   "load": "MF-10186"
+  },
+  "053": {
+   "category": [
+    "invoice"
+   ],
+   "load": "MF-10188"
+  },
+  "054": {
+   "category": [
+    "invoice"
+   ],
+   "load": "MF-10067"
+  },
+  "055": {
+   "category": [
+    "status",
+    "quote"
+   ],
+   "load": "MF-10046",
+   "multi": [
+    "status",
+    "quote"
+   ]
+  },
+  "056": {
+   "category": [
+    "status",
+    "quote"
+   ],
+   "load": "MF-10058",
+   "multi": [
+    "status",
+    "quote"
+   ]
+  },
+  "057": {
+   "category": [
+    "status",
+    "quote"
+   ],
+   "load": "MF-10063",
+   "multi": [
+    "status",
+    "quote"
+   ]
+  },
+  "058": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10066"
+  },
+  "059": {
+   "category": [
+    "status"
+   ],
+   "load": "MF-10028"
+  },
+  "060": {
+   "category": [
+    "status"
+   ],
+   "load": [
+    "MF-10333",
+    "MF-10587"
+   ]
+  }
+ }
+}
