@@ -30,9 +30,10 @@ make demo EMAIL=data/emails/041.eml
 |---|---|---|
 | `make demo [EMAIL=…]` | one email end to end | yes |
 | `make claims` | all 8 sample claims (035–042) | yes |
-| `make test` | 39 unit tests, fake model client | no |
+| `make test` | 41 unit tests, fake model client | no |
 | `make eval` | all 60 emails, scored against `eval/labels.json` (~$0.80) | yes |
 | `make eval-offline` | load lookup + PII check on all 60 | no |
+| `.venv/bin/python -m meridian <eml> --show-redacted` | print exactly what the model would receive (PII replaced) | no |
 
 If `ANTHROPIC_API_KEY` is missing, the CLI exits with a clear message.
 
@@ -85,7 +86,8 @@ Last full run ([`eval/out/report_full.md`](eval/out/report_full.md)):
 | Correct load, or correctly refused (ambiguous / no reference) | 60/60 |
 | Expected claim discrepancies raised · false alarms | 9/9 · 0 |
 | PII values in outbound model requests | 0 |
-| Cost · latency per email (classification) | ~$0.013 · p50 3.3s, p95 4.1s |
+| Cost · latency per email (classification only) | ~$0.013 · p50 3.2s, p95 3.9s |
+| Cost · latency per claim incl. draft (as in `make demo`) | ~$0.02 · ~7s |
 
 **Caveat:** the prompts were tuned on these same 60 emails and the labels in `eval/labels.json`
 were written by us, so read this as a regression suite rather than an accuracy estimate for

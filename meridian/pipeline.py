@@ -80,7 +80,7 @@ class Pipeline:
 
         result.findings = run_checks(email, resolution, pods, extraction, self.fp, photo_count)
         result.documents = documents_to_request(result.findings, extraction, photo_count)
-        result.steps = next_steps(result.findings)
+        result.steps = next_steps(result.findings, offline=extraction is None)
 
         if self.llm and draft:
             result.draft = self.llm.draft_ack(

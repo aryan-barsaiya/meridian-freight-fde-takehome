@@ -6,6 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from .emailparse import parse_eml
 from .llm import ModelError, require_api_key
 from .packet import render
 from .pipeline import Pipeline
@@ -19,7 +20,17 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--data", default=str(DEFAULT_DATA), help="folder with freightpro/ (default: ./data)")
     ap.add_argument("--no-llm", action="store_true", help="deterministic parts only; no API key needed")
     ap.add_argument("--no-draft", action="store_true", help="skip the acknowledgement draft")
+    ap.add_argument("--show-redacted", action="store_true",
+                    help="print the email text exactly as the model would receive it (PII replaced), then exit")
     args = ap.parse_args(argv)
+
+    if args.show_redacted:
+        pipeline = Pipeline(args.data, use_llm=False)
+        for path in args.emails:
+            e = parse_eml(path)
+            redacted = pipeline.redactor.redact(f"Subject: {e.subject}\n\n{e.body}").text
+            print(f"--- {path}\n{redacted}\n")
+        return 0
 
     if not args.no_llm:
         require_api_key()

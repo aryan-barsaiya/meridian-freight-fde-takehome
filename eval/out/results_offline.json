@@ -14,7 +14,7 @@
  {
   "id": "002",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -38,7 +38,7 @@
  {
   "id": "004",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -62,7 +62,7 @@
  {
   "id": "006",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -74,7 +74,7 @@
  {
   "id": "007",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -86,7 +86,7 @@
  {
   "id": "008",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -98,7 +98,7 @@
  {
   "id": "009",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -110,7 +110,7 @@
  {
   "id": "010",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -134,7 +134,7 @@
  {
   "id": "012",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -146,7 +146,7 @@
  {
   "id": "013",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.02,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -170,7 +170,7 @@
  {
   "id": "015",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -182,7 +182,7 @@
  {
   "id": "016",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -194,7 +194,7 @@
  {
   "id": "017",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -206,7 +206,7 @@
  {
   "id": "018",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -230,7 +230,7 @@
  {
   "id": "020",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -242,7 +242,7 @@
  {
   "id": "021",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -254,7 +254,7 @@
  {
   "id": "022",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -266,7 +266,7 @@
  {
   "id": "023",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -290,7 +290,7 @@
  {
   "id": "025",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.02,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -314,7 +314,7 @@
  {
   "id": "027",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -338,7 +338,7 @@
  {
   "id": "029",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -374,7 +374,7 @@
  {
   "id": "032",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -398,7 +398,7 @@
  {
   "id": "034",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -410,7 +410,7 @@
  {
   "id": "035",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.02,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -424,7 +424,7 @@
  {
   "id": "036",
   "error": null,
-  "seconds": 0.02,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -466,7 +466,7 @@
  {
   "id": "039",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -490,7 +490,7 @@
  {
   "id": "041",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -502,7 +502,7 @@
  {
   "id": "042",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -552,7 +552,7 @@
  {
   "id": "046",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -564,7 +564,7 @@
  {
   "id": "047",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -576,7 +576,7 @@
  {
   "id": "048",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -600,7 +600,7 @@
  {
   "id": "050",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -660,7 +660,7 @@
  {
   "id": "055",
   "error": null,
-  "seconds": 0.01,
+  "seconds": 0.0,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],
@@ -696,7 +696,7 @@
  {
   "id": "058",
   "error": null,
-  "seconds": 0.0,
+  "seconds": 0.01,
   "pii_leaks": 0,
   "category": null,
   "other_requests": [],

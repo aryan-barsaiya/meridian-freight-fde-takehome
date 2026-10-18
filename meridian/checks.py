@@ -215,7 +215,7 @@ def documents_to_request(findings: list[Finding], extraction: Extraction | None,
     return docs
 
 
-def next_steps(findings: list[Finding]) -> list[str]:
+def next_steps(findings: list[Finding], offline: bool = False) -> list[str]:
     codes = {f.code for f in findings}
     steps = []
     if codes & {"NO_IDENTIFIERS", "LOAD_NOT_FOUND", "LOAD_AMBIGUOUS", "ID_CONFLICT"}:
@@ -241,7 +241,9 @@ def next_steps(findings: list[Finding]) -> list[str]:
     if codes & {"LANE_MISMATCH", "COMMODITY_MISMATCH", "EQUIPMENT_MISMATCH", "DATE_MISMATCH", "CARRIER_MISMATCH",
                 "POD_FIELD_MISMATCH"}:
         steps.append("Resolve the mismatched details above with the shipper before filing with the carrier.")
-    if not steps:
+    if not steps and offline:
+        steps.append("Read the email against the load yourself: this offline run skipped the model-dependent checks.")
+    elif not steps:
         steps.append("No discrepancies found: open the OS&D file and notify the carrier of record.")
     return steps
 
